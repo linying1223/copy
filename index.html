@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <span class="copy">复制的内容</span>
+  <input type="button" value="复制" onClick="copySome()">
+  <script type="text/javascript" src="./index.js"></script> 
+  <script type="text/javascript">
+    // window.onload = function() {
+    var copyele = document.getElementsByClassName('copy')[0]
+    var copyVal = copyele.innerHTML
+    var copyFn = new CopyObj(copyVal, copyele)
+    // }
+    function copySome() {
+      copyFn.copy()
+    }
+  </script>
+</body>
+</html>
